@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn and Earn</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+      /* Reset and Box Sizing */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+  
+      /* Body Styling */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        color: #001f54;
+      }
+  
+      /* Top Navigation Bar */
+      .topnav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #001f54;
+        padding: 10px 20px;
+        flex-wrap: nowrap;
+      }
+  
+      .topnav .logo {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #ddd;
+      }
+  
+      .topnav a {
+        text-decoration: none;
+        color: #ddd;
+        padding: 10px 16px;
+        text-align: center;
+      }
+  
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+  
+      .topnav .nav-links {
+        display: flex;
+        gap: 10px;
+      }
+  
+      @media screen and (max-width: 600px) {
+        .topnav {
+          flex-wrap: wrap;
+        }      
+      }
+  
+      /* Header */
+      .header {
+        background-color: #e7f0fc;
+        padding: 20px;
+        text-align: center;
+      }
+  
+      .header .logo {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+  
+      .header p {
+        color: #4f4f4f;
+        margin-top: 5px;
+      }
+  
+      /* MCQ Section */
+      .mcq {
+        padding: 20px;
+        text-align: center;
+        background-color: #e7f0fc;
+      }
+  
+      .mcq h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+  
+      .categories {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+  
+      .category {
+        width: 100px;
+        height: 100px;
+        background-color: #f0f8ff;
+        border: 2px solid #001f54;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.3s, background-color 0.3s;
+      }
+  
+      .category:hover {
+        background-color: #e7f0fc;
+        transform: scale(1.1);
+      }
+  
+      /* Events Section */
+      .events {
+        background-color: #f0f8ff;
+        padding: 20px;
+        text-align: center;
+      }
+  
+      .events h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+  
+      .event-box {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+  
+      .event {
+        width: 150px;
+        height: 100px;
+        background-color: #e7f0fc;
+        border: 1px solid #001f54;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+  
+      /* Footer */
+      .footer {
+        background-color: #e7f0fc;
+        padding: 20px;
+        text-align: center;
+      }
+  
+      .footer h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+      }
+  
+      .social-dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+  
+      .dot {
+        width: 15px;
+        height: 15px;
+        background-color: #001f54;
+        border-radius: 50%;
+      }
+  
+      .categories {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .category {
+    width: 120px;
+    height: 120px;
+    background-color: #f0f8ff;
+    border: 2px solid #001f54;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    text-align: center;
+  }
+  
+  .category i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #001f54;
+  }
+  
+  .category:hover {
+    background-color: #e7f0fc;
+    transform: scale(1.1);
+  }
+  
+  .footer {
+    background-color: #e7f0fc;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #001f54;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    color: #001f54;
+    font-size: 1.5rem;
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #007bff;
+    transform: scale(1.2);
+  }
+  
+    </style>
+  </head>
+  <body>
+  
+    <!-- Top Navigation Bar -->
+    <div class="topnav">
+      <div class="logo">LOGO</div>
+      <div class="nav-links">
+        <a href="login.html">Login</a>
+        <a href="profile.html">Profile</a>
+      </div>
+    </div>
+  
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">LEARN & EARN</div>
+      <p>For you, for everyone</p>
+    </header>
+  
+    <!-- MCQ Section -->
+      <section class="mcq">
+      <h2>MCQ</h2>
+      <div class="categories">
+          <div class="categories">
+              <div class="category">
+                <i class="fas fa-square-root-alt"></i> <!-- Icon for Maths -->
+                <span>Maths</span>
+              </div>
+              <div class="category">
+                <i class="fas fa-book"></i> <!-- Icon for English -->
+                <span>English</span>
+              </div>
+              <div class="category">
+                <i class="fas fa-brain"></i> <!-- Icon for Reasoning -->
+                <span>Reasoning</span>
+              </div>
+              <div class="category">
+                <i class="fas fa-globe"></i> <!-- Icon for GK -->
+                <span>GK</span>
+              </div>
+            </div>          
+      </div>
+    </section>
+  
+    <!-- Events Section -->
+    <section class="events">
+      <h2>Events</h2>
+      <div class="event-box">
+        <div class="event">Event 1</div>
+        <div class="event">Event 2</div>
+      </div>
+    </section>
+  
+    <!-- Footer -->
+    <footer class="footer">
+      <h3>Follow Us on Social Media</h3>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </footer>  
+  
+  
+  
+  </body></html>
